@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Form</title>
+
+    <!-- <link rel="stylesheet" href="menue_form.css"> -->
+
+    <style>
+        body {
+            background-image: url('food_images.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+
+
+            /* margin: 0; */
+            /* font-family: Arial, Helvetica, sans-serif; */
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        input[type=text],
+select,
+textarea {
+    width: 45%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=number],
+select,
+textarea {
+    width: 45%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 70px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+
+}
+
+/* input[type=submit]:hover {
+    background-color: #45a049;
+} */
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 16px;
+    margin-left: 20px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 32px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.transperent_box {
+    /* margin: 1px; */
+    background-color: rgba(241, 239, 239, 0.39);
+    height: 522px;
+    /* border: 1px solid rgb(255, 255, 255); */
+
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- <center> -->
+        <center><h1> Add Product Deetails </h1><br><br></center>
+        <div class="transperent_box">
+            <form action="menu.py" method="get" autocomplete="off">
+
+                <!-- <div class="row">
+                    <div class="col-25">
+                        <label for="pid">
+                            <h3>Product ID:</h3>
+                        </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number"  min="0" id="pid" pId="pid" placeholder="Product id..." name="pid" required><br><br>
+                    </div>
+                </div> -->
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="pname">
+                            <h3>Product Name:</h3>
+                        </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="pname" name="pname" placeholder="Product Name..." name="pname"
+                            required><br><br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="pmrp">
+                            <h3>Product MRP:</h3>
+                        </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number"  min="0" id="pmrp" MRP="pmrp" placeholder="Product MRP..." name="pmrp"
+                            required><br><br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phsn">
+                            <h3>Product HSN:</h3>
+                        </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number"  min="0" id="phsn" HSN="phsn" placeholder="Product HSN..." name="phsn"
+                            required><br><br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="ppr">
+                            <h3>Product Purchase Rate:</h3>
+                        </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number"  min="0" id="ppr" PPR="ppr" placeholder="Product Purchase Rate..." name="ppr"
+                            required><br><br><br>
+                    </div>
+
+                    <input type="submit" value="Submit">
+
+                </div>
+
+            </form>
+        </div>
+        
+        
+    <!-- </center> -->
+</body>
+
+</html>

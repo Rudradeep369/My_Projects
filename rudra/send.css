@@ -1,0 +1,86 @@
+body {
+    font-family: Arial;
+    color: black;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    /* background-color: rgb(15, 111, 221); */
+}
+
+.right {
+    right: 0;
+    /* background-color: red; */
+}
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background: #f1f1f1;
+        }
+
+        input[type=tel],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background: #f1f1f1;
+        }
+
+        input[type=submit] {
+            width: 28%;
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        label {
+            /* Other styling... */
+            text-align: right;
+            clear: both;
+            float: left;
+            margin-right: 15px;
+        }
+
+        .transperent_box {
+            /* margin: 1px; */
+            background-color: rgba(241, 239, 239, 0.39);
+            /* height: 420px; */
+            width: 99.7%;
+            border-radius: 15px;
+            /* border: 1px solid rgb(255, 255, 255); */
+
+        }
+
+        fieldset {
+            border-color: white;
+            border-radius: 15px;
+        }

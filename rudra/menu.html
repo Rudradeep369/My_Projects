@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="menue.css">
+
+</head>
+
+<body>
+    <div class="top-nav">
+        <a class="active" href="#home">Home</a>
+        <a href="#New Items">New Items</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+        <div class="welcom">
+            <img src="tinywow_welcome_11774604.png" alt="welcome">
+        </div>
+    </div>
+
+    <h2> Menue </h2>
+
+    <table>
+        <tr>
+            <th>BURGERS</th>
+
+        </tr>
+        <tr>
+            <td> ADD PRODUCT <a href="http://localhost/rudra/redirect_menue.py"> <span style="color:rgb(53, 53, 53) ;font-size: 20px "> <i class="fa-solid fa-circle-plus"></i></span></a>
+            </td>
+            <!-- <i class="fa-solid fa-circle-plus"></i> -->
+        </tr>
+        <tr>
+            <td>DELETE PRODUCT <a href="http://localhost/rudra/DELETEPRODUCT.py"> <span style="color:rgb(53, 53, 53) ;font-size: 20px "> <i class="fa-solid fa-circle-minus"></i></span></a>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="dropdown">
+                <div class="dropdown-toggle" onclick="toggleDropdown()">UPDATE PRODUCT <span style="color:rgb(53, 53, 53) ;font-size: 20px "><i class="fa-solid fa-circle-chevron-down"></i></span></div>
+                <dl class="dropdown-menu">
+                  <dd onclick="selectItem('UPDATE PRODUCT NAME')">UPDATE PRODUCT NAME <a href="http://localhost/rudra/UPDATEPRODUCT.py"> <span style="color:rgb(53, 53, 53) ;font-size: 20px "> <i class="fa-solid fa-pen-to-square"></i></span></a></dd>
+                  <dd onclick="selectItem('UPDATE PRODUCT MRP')">UPDATE PRODUCT MRP <a href="http://localhost/rudra/UPDATEPRODUCTMRP.py"> <span style="color:rgb(53, 53, 53) ;font-size: 20px "> <i class="fa-solid fa-pen-to-square"></i></span></a></dd>
+                  <dd onclick="selectItem('UPDATE PRODUCT HSN')">UPDATE PRODUCT HSN</dd>
+                  <dd onclick="selectItem('UPDATE PRODUCT PURCHASE RATE')">UPDATE PRODUCT PURCHASE RATE</dd>
+                  
+                </dl>
+              </div>
+                  
+            </td>
+
+        </tr>
+        <tr>
+            <td>Merlot</td>
+
+        </tr>
+        <tr>
+            <td>Montepulciano.</td>
+
+        </tr>
+        <tr>
+            <td>Pinot Noir</td>
+
+        </tr>
+    </table>
+    <script src="menue.js"></script>
+
+</body>
+
+</html>
