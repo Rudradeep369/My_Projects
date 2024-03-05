@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tutechsol_6.css">
+
+    <title>Tutechage Solution_6</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://localhost/rudra3/tutechagesol.html"><i
+                    class="fa-solid fa-microchip"></i> Tutechage Solution</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about">About <i class="fa-solid fa-rectangle-list"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#contact_us">Contact Us <i
+                                class="fa-solid fa-phone-flip"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="https://www.google.com/maps/place/Tutechage+Solution/@22.49007,88.395027,15z/data=!4m6!3m5!1s0x3a0271bf1fd19311:0x112d235b5add58aa!8m2!3d22.4900695!4d88.3950274!16s%2Fg%2F1ptyg3xlh?hl=en&entry=ttu">Direction
+                            <i class="fa-solid fa-diamond-turn-right"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Rate us <i class="fa-solid fa-star"
+                                style="color: #faf9f2;"></i> </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Jumbotron -->
+
+    <div class="bg-image p-5 pt-2 shadow-1-strong  mb-5 text-white"
+        style="background-image: url('pexels_edited.jpg'); background-size: cover;height: 100vh;background-color: rgba(0, 0, 0, 0.3);">
+        <div class="edited-text ">
+            <div class="col">
+                <h1 class="mb-3 h1" style="font-size: 3.4rem;"> <span class="s">Tutechage</span> <span
+                        class="s">Solution</span></h1>
+                <h1 class="mb-3 h3"> <span class="s">Software</span> <span class="s">
+                        Company</span> <span class="s"> in
+                    </span> <span class="s">
+                        Santoshpur</span></h1>
+
+                <p>
+                    <span class="s"> We</span> <span class="s"> develop</span> <span class="s">
+                        the</span>
+                    <span class="s"> customized</span> <span class="s"> software</span> <span class="s">
+                        as</span> <span class="s">
+                        per</span> <span class="s"> your</span> <span class="s"> business</span>
+                    <span class="s"> or</span>
+                    <span class="s"> accounts</span> <span class="s"> based</span> <span class="s">
+                        requirements.</span>
+                </p>
+            </div>
+        </div>
+       
+        <h1>
+            <a href="" class="typewrite" data-period="2000" style="color: white;text-decoration: none; text-align: center;" data-type='[ "Use Your Own Customized Software", "নিজের কাস্টমাইজড সফটওয়্যার নিজে ব্যবহার করুন" ]'>
+              <span class="wrap"></span>
+            </a>
+          </h1>
+    </div>
+
+
+
+    <!-- Jumbotron -->
+
+<script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+</body>
+
+</html>

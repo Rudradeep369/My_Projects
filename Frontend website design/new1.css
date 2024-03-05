@@ -1,0 +1,36 @@
+
+ .transition1{
+  position: relative;
+  animation: moveLeftToRight1 14s linear infinite;
+ }
+ @keyframes moveLeftToRight1 {
+  0% {
+    left: -100%;
+  }
+  10% {
+    left: 0;
+  }
+  90% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+
+}
+ .transition2{
+  position: relative;
+  animation: moveLeftToRight2 14s linear infinite;
+ }
+ @keyframes moveLeftToRight2 {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+
+}
